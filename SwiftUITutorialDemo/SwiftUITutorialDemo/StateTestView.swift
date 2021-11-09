@@ -19,7 +19,39 @@ struct StateTestView: View {
             } label: {
                 Text("Press me to add 1")
             }
+
             Slider(value: $score, in: 1...100)
+            
+            Divider()
+                .foregroundColor(.blue)
+
+            BindingViewDemo(score: $score)
+        }
+    }
+}
+
+struct SomeStruct {
+    var age: Int
+    var name: String
+}
+
+struct BindingViewDemo: View {
+    
+    @Binding var score: Float
+    
+    var isPlaying: Bool {
+        return score > 50.0
+    }
+    
+    var body: some View {
+        VStack {
+            Text("magic play button")
+            Button {
+                self.score = self.score + 20
+            } label: {
+                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+                    .imageScale(.large)
+            }
         }
     }
 }
