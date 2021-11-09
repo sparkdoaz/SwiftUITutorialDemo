@@ -11,8 +11,14 @@ struct StateTestView: View {
     // 建議state要使用 private（如果沒有要披露出去的話）
     @State private var score: Float = 0.0
     
+    // @state 主要是 structure
+    @State private var user: SomeStruct = SomeStruct(age: 20, name: "Spark")
+    
     var body: some View {
         VStack {
+            
+            Text("name: \(self.user.name)")
+            
             Text("Value: \(self.score)")
             Button {
                 self.score = self.score + 1.0
@@ -26,6 +32,15 @@ struct StateTestView: View {
                 .foregroundColor(.blue)
 
             BindingViewDemo(score: $score)
+            
+            Divider()
+                .foregroundColor(.blue)
+            
+            Button {
+                self.user.name = "handsome \(self.user.name)"
+            } label: {
+                Text("be strong")
+            }
         }
     }
 }
@@ -50,7 +65,7 @@ struct OnehundredOrLess {
 }
 
 struct BindingViewDemo: View {
-    
+    // 無法 private
     @Binding var score: Float
     
     var isPlaying: Bool {
