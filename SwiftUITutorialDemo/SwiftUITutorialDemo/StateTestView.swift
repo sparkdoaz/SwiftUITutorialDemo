@@ -35,6 +35,20 @@ struct SomeStruct {
     var name: String
 }
 
+@propertyWrapper
+struct OnehundredOrLess {
+    private var number: Float
+    // wrappedValue變量的名字是固定的
+    var wrappedValue: Float {
+        get { return number }
+        set { number = min(newValue, 100) }
+    }
+    
+    init() {
+        self.number = 0
+    }
+}
+
 struct BindingViewDemo: View {
     
     @Binding var score: Float
@@ -47,7 +61,9 @@ struct BindingViewDemo: View {
         VStack {
             Text("magic play button")
             Button {
-                self.score = self.score + 20
+                @OnehundredOrLess var temp: Float
+                temp = self.score + 20
+                self.score = temp
             } label: {
                 Image(systemName: isPlaying ? "pause.circle" : "play.circle")
                     .imageScale(.large)
