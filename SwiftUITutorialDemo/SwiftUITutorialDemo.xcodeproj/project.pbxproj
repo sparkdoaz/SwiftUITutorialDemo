@@ -12,6 +12,7 @@
 		1D0EA5F1273A05B20080A90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0EA5F0273A05B20080A90D /* Assets.xcassets */; };
 		1D0EA5F4273A05B20080A90D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0EA5F3273A05B20080A90D /* Preview Assets.xcassets */; };
 		1D0EA5FB273A06040080A90D /* StateTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0EA5FA273A06040080A90D /* StateTestView.swift */; };
+		1D0EA600273A6C360080A90D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0EA5FF273A6C360080A90D /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		1D0EA5F0273A05B20080A90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D0EA5F3273A05B20080A90D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D0EA5FA273A06040080A90D /* StateTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTestView.swift; sourceTree = "<group>"; };
+		1D0EA5FF273A6C360080A90D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				1D0EA5EE273A05AF0080A90D /* ContentView.swift */,
 				1D0EA5F0273A05B20080A90D /* Assets.xcassets */,
 				1D0EA5F2273A05B20080A90D /* Preview Content */,
+				1D0EA5FF273A6C360080A90D /* Weather.swift */,
 			);
 			path = SwiftUITutorialDemo;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0EA600273A6C360080A90D /* Weather.swift in Sources */,
 				1D0EA5EF273A05AF0080A90D /* ContentView.swift in Sources */,
 				1D0EA5FB273A06040080A90D /* StateTestView.swift in Sources */,
 				1D0EA5ED273A05AF0080A90D /* SwiftUITutorialDemoApp.swift in Sources */,
