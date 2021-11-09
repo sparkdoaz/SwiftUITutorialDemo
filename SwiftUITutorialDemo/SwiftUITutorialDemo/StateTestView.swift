@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct StateTestView: View {
+    // 建議state要使用 private（如果沒有要披露出去的話）
+    @State private var score: Float = 0.0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Value: \(self.score)")
+            Button {
+                self.score = self.score + 1.0
+            } label: {
+                Text("Press me to add 1")
+            }
+            Slider(value: $score, in: 1...100)
+        }
     }
 }
 
